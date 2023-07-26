@@ -1,0 +1,29 @@
+<div class="traker-conteiner">
+  <form>
+    <input
+      type="text"
+      id="package_id"
+      name="packageId"
+      [(ngModel)]="packageId"
+      placeholder="Enter Package ID"
+      required
+    />
+
+    <button type="submit" (click)="fetchPackages()" class="create-action-btn">
+      Soumettre
+    </button>
+  </form>
+  <div class="details-container">
+    <div style="width: 50%">
+      <app-package-details
+        [details]="packagesDetails?.data"
+      ></app-package-details>
+
+      <!-- <app-delivery-details
+        [details]="packagesDetails?.data"
+      ></app-delivery-details> -->
+    </div>
+
+    <app-map></app-map>
+  </div>
+</div>

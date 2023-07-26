@@ -1,0 +1,56 @@
+<!-- dropdown-autosuggest.component.html -->
+<div class="form_container">
+  <div class="searchTerm">
+    <label>Select Package ID</label>
+    <input
+      type="text"
+      id="search"
+      value="{{ selectedOption }}"
+      [(ngModel)]="searchTerm"
+      (keyup)="onSearchTermChange()"
+      placeholder="Rechercher..."
+      autocomplete="off"
+    />
+    <ul class="option-container">
+      <li *ngIf="packageIds.length > 0 && listeVisible">
+        <ul>
+          <li
+            class="option"
+            *ngFor="let packageId of packageIds"
+            (click)="selectOption(packageId?._id)"
+          >
+            {{ packageId?.description }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <form>
+    <div>
+      <label>Location (Lat)</label>
+      <input
+        type="number"
+        name="location_lat"
+        [(ngModel)]="location_lat"
+        required
+      />
+    </div>
+
+    <div>
+      <label>Location (Lng)</label>
+      <input
+        type="number"
+        name="location_lng"
+        [(ngModel)]="location_lng"
+        required
+      />
+    </div>
+    <button type="submit" (click)="submit()" class="create-action-btn">
+      Soumettre
+    </button>
+  </form>
+  <!-- <ng-template #notFound>
+    <p>Non trouvé</p>
+  </ng-template> -->
+</div>

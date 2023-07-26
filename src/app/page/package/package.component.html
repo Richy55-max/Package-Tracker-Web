@@ -1,0 +1,108 @@
+<!-- <div class="accueil-container"> -->
+<div class="package-container">
+  <h1>Create new Package</h1>
+  <form #monFormulaire="ngForm" (ngSubmit)="onSubmit(monFormulaire)">
+    <div>
+      <label>Description</label>
+      <textarea
+        id="description"
+        [(ngModel)]="description"
+        name="description"
+        required
+      ></textarea>
+    </div>
+
+    <div>
+      <label>Poids (en grammes)</label>
+      <input type="number" name="weight" [(ngModel)]="weight" required />
+    </div>
+
+    <div>
+      <label>Largeur (en cm)</label>
+      <input type="number" name="width" [(ngModel)]="width" required />
+    </div>
+
+    <div>
+      <label>Hauteur (en cm)</label>
+      <input type="number" name="height" [(ngModel)]="height" required />
+    </div>
+
+    <div>
+      <label>Profondeur (en cm)</label>
+      <input type="number" name="depth" [(ngModel)]="depth" required />
+    </div>
+
+    <div class="sender_infos">
+      <label>Nom de l'expéditeur</label>
+      <input type="text" name="from_name" [(ngModel)]="from_name" required />
+    </div>
+
+    <div>
+      <label>Adresse de l'expéditeur</label>
+      <input
+        type="text"
+        name="from_address"
+        [(ngModel)]="from_address"
+        required
+      />
+    </div>
+
+    <div>
+      <label>Location (Latitude)</label>
+      <input
+        type="number"
+        name="from_location.lat"
+        [(ngModel)]="from_location_lat"
+        required
+      />
+    </div>
+
+    <div>
+      <label>Location (Longitude)</label>
+      <input
+        type="number"
+        name="from_location.lng"
+        [(ngModel)]="from_location_lng"
+        required
+      />
+    </div>
+
+    <div class="recipient_infos">
+      <label>Nom du destinataire</label>
+      <input type="text" name="to_name" [(ngModel)]="to_name" required />
+    </div>
+
+    <div>
+      <label>Adresse du destinataire</label>
+      <input type="text" name="to_address" [(ngModel)]="to_address" required />
+    </div>
+
+    <div>
+      <label>Location (Latitude)</label>
+      <input
+        type="number"
+        name="to_location.lat"
+        [(ngModel)]="to_location_lat"
+        required
+      />
+    </div>
+
+    <div>
+      <label>Location (Longitude)</label>
+      <input
+        type="number"
+        name="to_location.lng"
+        [(ngModel)]="to_location_lng"
+        required
+      />
+    </div>
+
+    <app-button
+      [title]="submitTitle"
+      [backgroundColor]="submitBgColor"
+      [disabled]="monFormulaire.invalid || false"
+    ></app-button>
+
+    <!-- <button type="submit" [disabled]="monFormulaire.invalid">Soumettre</button> -->
+  </form>
+</div>

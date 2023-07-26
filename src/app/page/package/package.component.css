@@ -1,0 +1,53 @@
+.package-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.package-container h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 35px;
+}
+
+.package-container form{
+    position: relative;
+}
+.package-container form div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin: 12px 0px;
+}
+
+.package-container form .recipient_infos,
+.package-container form .sender_infos {
+  margin-top: 50px;
+}
+
+.package-container form input,
+.package-container form textarea {
+  padding: 5px;
+}
+
+.package-container form input:focus,
+.package-container form textarea:focus {
+  outline: 0px;
+}
+
+.package-container form .submit-form {
+  margin-top: 20px;
+  padding: 15px 35px;
+  background-color: #6aa74f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: -1px 7px 17px -6px rgb(48 48 48 / 87%);
+  transition: all 3s ease;
+  font-weight: 500;
+  font-size: 18px;
+  border: 1px solid;
+}

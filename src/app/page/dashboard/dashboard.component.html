@@ -1,0 +1,80 @@
+<div class="accueil-container">
+  <h1 style="text-align: center">Welcome to Admin Home !</h1>
+
+  <section class="package-list-section">
+    <div class="package-list-header">
+      <h1>Package List</h1>
+      <div class="packages-lists">
+        <table>
+          <thead>
+            <th>ID</th>
+            <th>Weight</th>
+            <th>From Name</th>
+            <th>To Name</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of allPackages?.data">
+              <td>{{ items._id }}</td>
+              <td>{{ items.weight }}</td>
+              <td>{{ items.from_name }}</td>
+              <td>{{ items.to_name }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <button
+        class="create-action-btn"
+        (click)="changeItem('Package')"
+        [routerLink]="['/package']"
+      >
+        Create Package
+      </button>
+    </div>
+  </section>
+
+  <section class="package-list-section">
+    <div class="package-list-header">
+      <h1>Delivery List</h1>
+      <div class="packages-lists">
+        <table>
+          <thead>
+            <th>ID</th>
+            <th>Status</th>
+            <th>Pickup time</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of allDeliveries?.data">
+              <td>{{ items._id }}</td>
+              <td
+                [style.color]="
+                  items.status === 'Picked Up'
+                    ? '#6fa8dc'
+                    : items.status === 'In-Transit'
+                    ? '#ff9900'
+                    : items.status === 'Delivered'
+                    ? '#6aa74f'
+                    : '#e06666'
+                "
+              >
+                {{ items.status | uppercase }}
+              </td>
+
+              <td>{{ items.pickup_time }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <button
+        class="create-action-btn"
+        (click)="changeItem('Delivery')"
+        [routerLink]="['/delivery']"
+      >
+        Create Delivery
+      </button>
+    </div>
+  </section>
+</div>

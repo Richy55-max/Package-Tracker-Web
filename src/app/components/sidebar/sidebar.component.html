@@ -1,0 +1,13 @@
+<div class="sidebar">
+  <h1 class="menu-title">Package Tracker</h1>
+
+  <ul>
+    <li
+      *ngFor="let item of menuItems"
+      [class.active]="selectedItemService.getSelectedItem() === item"
+      (click)="onSelectMenuItem(item)"
+    >
+      <a [routerLink]="['/' + item.toLowerCase()]">{{ item }}</a>
+    </li>
+  </ul>
+</div>

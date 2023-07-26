@@ -1,27 +1,37 @@
-# PackagesTracking
+# Projet Angular : PackagesTracking
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+Ce projet est un projet Angular qui utilise Angular CLI version v18.16.0
 
-## Development server
+# Prérequis
+Avant de commencer, assurez-vous d'avoir les éléments suivants installés sur votre machine :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Node.js : https://nodejs.org (version : v18.16.0)
+Angular CLI : Vous pouvez l'installer en exécutant la commande suivante dans votre terminal :
 
-## Code scaffolding
+### npm install -g @angular/cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation
+Clonez le dépôt GitHub sur votre machine en exécutant la commande suivante :
+git clone https://github.com/Richy55-max/Package-Tracker-Web.git
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Accédez au répertoire du projet :
+cd Package-Tracker-Web
 
-## Running unit tests
+Installez les dépendances du projet en exécutant la commande suivante :
+### npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Démarrage
+Une fois les dépendances installées et la configuration terminée, vous pouvez lancer le projet en exécutant la commande suivante :
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### ng serve
+Le projet sera alors accessible dans votre navigateur à l'adresse suivante : http://localhost:4200/.
 
-## Further help
+## Tâches non effectuées
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Contraintes de temps : Les délais serrés ce qui a limité le temps disponible pour accomplir toutes les tâches.
+
+2. Prise en main de la documentation des websockets : La compréhension des websockets s'est avérée un peu complexe
+
+3. Utilisation d'Angular pour le front-end : La familiarisation avec Angular en tant que framework front-end a été un point bloquant, car il a fallu du temps pour maîtriser ses concepts et optimiser son utilisation.

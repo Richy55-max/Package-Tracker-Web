@@ -1,0 +1,41 @@
+<div class="driver-container">
+  <form>
+    <input
+      type="text"
+      id="delivery_id"
+      name="deliveryId"
+      [(ngModel)]="deliveryId"
+      placeholder="Enter Delivery ID"
+      required
+    />
+
+    <button type="submit" (click)="fetchDelivery()" class="create-action-btn">
+      Soumettre
+    </button>
+  </form>
+
+  <div class="details-container">
+    <div>
+      <div style="width: 50%">
+        <app-package-details
+          [details]="deliveryDetails?.data?.package_id"
+        ></app-package-details>
+
+        <app-delivery-details
+          [details]="deliveryDetails?.data"
+        ></app-delivery-details>
+      </div>
+    </div>
+
+    <div class="map-container"></div>
+    <div class="button-actions">
+      <div class="action" *ngFor="let item of actionsButtons">
+        <app-button
+          [title]="item.title"
+          [backgroundColor]="item.bg"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- *ngFor="let action for actionsButons" -->

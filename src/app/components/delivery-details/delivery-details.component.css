@@ -1,0 +1,17 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  gap: 15px;
+}
+
+.details h2 {
+  font-weight: 700;
+}
+
+.details div {
+  margin: 10px 0px;
+}
+span {
+  font-weight: 500;
+}

@@ -1,0 +1,33 @@
+<div class="details">
+  <div *ngIf="details">
+    <div>
+      <span>ID:</span>
+      <p>{{ details?._id }}</p>
+    </div>
+
+    <div>
+      <span>Start time:</span>
+      <p>{{ details?.start_time }}</p>
+    </div>
+
+    <div>
+      <span>End Time:</span>
+      <p>{{ details?.end_time }}</p>
+    </div>
+    <div>
+      <span>Pickup time:</span>
+      <p>{{ details?.pickup_time }}</p>
+    </div>
+    <div>
+      <span>Location:</span>
+      <p>
+        Longitude:{{ details?.location?.lat }} lat:{{ details?.location?.lng }}
+      </p>
+    </div>
+
+    <div>
+      <span>Status:</span>
+      <p>{{ details?.status | uppercase }}</p>
+    </div>
+  </div>
+</div>

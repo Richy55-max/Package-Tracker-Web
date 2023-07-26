@@ -1,0 +1,40 @@
+<div class="details">
+  <h2>Package Details</h2>
+  <div *ngIf="details">
+    <div>
+      <span>ID:</span>
+      <p>{{ details?._id }}</p>
+    </div>
+    <div>
+      <span>Description:</span>
+      <p>{{ details?.description }}</p>
+    </div>
+    <div>
+      <span>Weight:</span>
+      <p>{{ details?.weight }} grams</p>
+    </div>
+    <div *ngIf="details?.width && details?.height && details?.depth">
+      <span>Dimensions:</span>
+      <p>
+        {{ details?.width }}cm x {{ details?.height }}cm x
+        {{ details?.depth }}cm
+      </p>
+    </div>
+    <div>
+      <span>From Name:</span>
+      <p>{{ details?.from_name }}</p>
+    </div>
+    <div>
+      <span>From Address:</span>
+      <p>{{ details?.from_address }}</p>
+    </div>
+    <div>
+      <span>To Name:</span>
+      <p>{{ details?.to_name }}</p>
+    </div>
+    <div>
+      <span>To Address:</span>
+      <p>{{ details?.to_address }}</p>
+    </div>
+  </div>
+</div>
